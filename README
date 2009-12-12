@@ -1,0 +1,2 @@
+    This is a birdge for integrating ROR projects with JOSSO.
+    If you developed some projects with JAVA, PHP, ROR....., however, some day you want to integrate all the projects with JOSSO, you will find that you can't get a absolute JOSSO agent for ROR. Yes, You are right, this is my situation for developed a JOSSO agent for ROR projects called JOSSOClientPlugInOnROR. Maybe I should make a good name, whatever.
