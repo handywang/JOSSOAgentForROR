@@ -1,0 +1,10 @@
+## YAML Template.
+development:
+    josso_root: http://josso.finalist.hk/jossoforrace/
+    partner_application_entry_url: http://localhost:3000/test
+test:
+    josso_root: http://josso.finalist.hk/jossoforrace/
+    partner_application_entry_url: http://localhost:3000/test
+production:
+    josso_root: http://josso.finalist.hk/jossoforrace/
+    partner_application_entry_url: http://localhost:3000/test

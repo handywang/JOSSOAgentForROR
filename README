@@ -1,2 +1,46 @@
+Introduction
+=============
+    This plugin is used for integrating SSO with JOSSO in RubyOnRails projects.
+    If you developed some projects with JAVA, PHP, ROR... 
+    However, some day you want to integrate all the projects with JOSSO, you will find that you can't get a absolute JOSSO agent for ROR. 
+    Yes, You are right, this is my situation for developed a JOSSO agent for ROR projects called JOSSOAgentForROR. 
+    Maybe I should make a good name, whatever.
+    
+    Your need and only need is use the "inject_josso_agent" method in the ApplicationController directly
+    And modity the josso_config.yml file in the directory "Vendor/rorjossoagent/config".
+    Please follow the Example.
+
+Example
+=======
+    (1) create a Ruby On Rails application with NetBeans IDE and create a Controller such as TestController.
+    (2) use the 'inject_josso_agent' method in the ApplicationController.
+        class ApplicationController < ActionController::Base
+            # The ling below is you need to do.
+            inject_josso_agent
+            helper :all
+            protect_from_forgery # :secret => '82080e75741b9780ebdb607d770322ae'
+        end
+
+    (3) modify the josso_config file, if you don't have josso
+        you can deploy a josso application or use the default configration in josso_config.yml,
+        the username is: handy.wang@finalist.hk, the password is: 123456
+        development:
+            josso_root: your josso application root url here, such as 'http://localhost:8080/josso'.
+            partner_application_entry_url: your application home here, such as 'http://localhost:3000/test'
+        test:
+            josso_root: your josso application root url here, such as 'http://localhost:8080/josso'.
+            partner_application_entry_url: your application home here, such as 'http://localhost:3000/test'
+        production:
+            josso_root: your josso application root url here, such as 'http://localhost:8080/josso'.
+            partner_application_entry_url: your application home here, such as 'http://localhost:3000/test'
+    (4) Run the server by NetBean or command: ruby script/server
+        And access the url 'partner_application_entry_url', you will see JOSSO login page,
+        login with the username and password I told in the top words. OK, that's all.
+    (5) If you have any quetions or issues about this plugin please let me know that.
+        my email is: handy.wang@finalist.cn
+Authoer: Handy.Wang
+Email: handy.wang@finalist.cn
+Copyright (c) 2009 [Finalist BeiJing IT Group and Handy.Wang], released under the MIT license and GPL.
+
     This is a birdge for integrating ROR projects with JOSSO.
-    If you developed some projects with JAVA, PHP, ROR....., however, some day you want to integrate all the projects with JOSSO, you will find that you can't get a absolute JOSSO agent for ROR. Yes, You are right, this is my situation for developed a JOSSO agent for ROR projects called JOSSOClientPlugInOnROR. Maybe I should make a good name, whatever.
+    
