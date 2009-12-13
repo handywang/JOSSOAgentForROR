@@ -1,6 +1,6 @@
 Introduction
 =============
-    This plugin is used for integrating SSO with JOSSO in RubyOnRails projects.
+    This plugin is used for integrating SSO with JOSSO1.7 in RubyOnRails projects.
     If you developed some projects with JAVA, PHP, ROR... 
     However, some day you want to integrate all the projects with JOSSO, you will find that you can't get a absolute JOSSO agent for ROR. 
     Yes, You are right, this is my situation for developed a JOSSO agent for ROR projects called JOSSOAgentForROR. 
